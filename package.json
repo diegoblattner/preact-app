@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "prestart": "npm install --save per-env",
     "start": "per-env",
     "start:production": "npm run -s serve",
     "start:development": "npm run -s dev",
@@ -26,12 +25,12 @@
     "eslint-plugin-import": "^2.14.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^21.2.1",
-    "per-env": "^1.0.2",
     "preact-cli": "^2.1.0",
     "preact-cli-plugin-fast-async": "^1.0.1",
     "preact-render-spy": "^1.2.1"
   },
   "dependencies": {
+    "per-env": "^1.0.2",
     "preact": "^8.2.6",
     "preact-compat": "^3.17.0",
     "preact-router": "^2.5.7",
