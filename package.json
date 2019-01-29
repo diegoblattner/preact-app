@@ -25,13 +25,13 @@
     "eslint-plugin-import": "^2.14.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^21.2.1",
-    "preact-cli-plugin-fast-async": "^1.0.1",
     "preact-render-spy": "^1.2.1"
   },
   "dependencies": {
     "per-env": "^1.0.2",
     "preact": "^8.2.6",
     "preact-cli": "^2.2.1",
+    "preact-cli-plugin-fast-async": "^1.0.1",
     "preact-compat": "^3.17.0",
     "preact-router": "^2.5.7",
     "prop-types": "^15.6.2"
