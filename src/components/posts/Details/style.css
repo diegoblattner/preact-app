@@ -1,0 +1,19 @@
+.image {
+  display: block;
+  background-color: #c9c9c9;
+  width: 100%;
+  height: 150px;
+}
+
+.post {
+  margin: 1rem;
+}
+
+.post__body {
+  margin: 1rem 0 1.5rem 0;
+}
+
+.post__title::first-letter,
+.post__body::first-letter {
+  text-transform: capitalize;
+}

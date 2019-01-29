@@ -1,0 +1,24 @@
+.comments {
+  padding-top: 0.5rem;
+  background: #f4f4f4;
+}
+
+.comments__title {
+  margin: 1rem;
+}
+
+.comments__list {
+  display: block;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.comment {
+  padding: 1rem;
+}
+
+.comment__email {
+}

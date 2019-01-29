@@ -1,0 +1,17 @@
+.carousel {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.carousel__item {
+  display: block;
+  overflow: hidden;
+  max-height: 12rem;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 0.8rem;
+  margin: 1.4rem 0.8rem;
+}

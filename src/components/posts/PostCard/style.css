@@ -1,0 +1,31 @@
+.item {
+  overflow: hidden;
+  white-space: normal;
+  max-height: 12rem;
+}
+
+.title {
+  display: block;
+  margin: 0.25rem 0 0.5rem 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.thumbnail {
+  float: left;
+  width: 85px;
+  height: 85px;
+  background: #c9c9c9;
+  margin-right: 0.6rem;
+}
+
+.body {
+  padding-left: 0.35rem;
+  display: inline;
+}
+
+.title::first-letter,
+.body::first-letter {
+  text-transform: capitalize;
+}
