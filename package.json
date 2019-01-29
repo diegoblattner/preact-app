@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "prestart": "npm i",
     "start": "per-env",
     "start:production": "npm run -s serve",
     "start:development": "npm run -s dev",
