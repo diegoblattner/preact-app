@@ -3,13 +3,13 @@ import Header from '../../header';
 import { FilterBar } from '../../list/filter-bar/component';
 import { PostsList } from '../PostsList/component';
 import { listPosts } from '../service';
-import style from './style';
+import style from './style.css';
 
 class ListPage extends Component {
   constructor() {
     super();
     this.state = {
-      promise: listPosts()
+      promise: listPosts(),
     };
   }
 

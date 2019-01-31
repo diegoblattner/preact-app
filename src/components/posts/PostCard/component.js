@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { route } from 'preact-router';
 import { Card } from '../../Card/component';
 import { Placeholder } from '../../Placeholder/component';
-import style from './style';
+import style from './style.css';
 
 class PostCard extends Component {
   onSelect() {
@@ -22,7 +22,7 @@ class PostCard extends Component {
             style={{
               height: '85px',
               display: 'inline-block',
-              width: 'calc(100% - 96px)'
+              width: 'calc(100% - 96px)',
             }}
           />
         </article>
@@ -53,8 +53,8 @@ PostCard.propTypes = {
   data: PropTypes.shape({
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired
-  }).isRequired
+    body: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export { PostCard };

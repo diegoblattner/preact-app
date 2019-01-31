@@ -1,6 +1,6 @@
 import { h } from 'preact';
 import { states, ListBase } from '../base';
-import style from './style';
+import style from './style.css';
 
 const wrapper = C => <div className={style.filter}>{C}</div>;
 
@@ -14,11 +14,7 @@ FilterBar.prototype[states.empty] = function empty() {
 FilterBar.prototype[states.loaded] = function loaded(items) {
   return wrapper(
     <div>
-      Showing 
-{' '}
-{items.length} 
-{' '}
-{items.length > 1 ? "posts" : "post"}
+      Showing {items.length} {items.length > 1 ? 'posts' : 'post'}
     </div>,
   );
 };

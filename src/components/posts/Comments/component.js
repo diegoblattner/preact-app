@@ -4,7 +4,7 @@ import { getPostComments } from '../service';
 import { List } from '../../GenericList/component';
 import { Card } from '../../Card/component';
 import { Placeholder } from '../../Placeholder/component';
-import style from './style';
+import style from './style.css';
 
 const renderComment = comment => ({
   key: comment.id,
@@ -18,7 +18,7 @@ const renderComment = comment => ({
         {comment.email}
       </a>
     </Card>
-  )
+  ),
 });
 
 const loadingCard = () => (
@@ -34,7 +34,7 @@ class Comments extends Component {
 
     const result = await getPostComments(postId);
     this.setState({
-      comments: result || []
+      comments: result || [],
     });
   }
 
@@ -56,7 +56,7 @@ class Comments extends Component {
 }
 
 Comments.propTypes = {
-  postId: PropTypes.number.isRequired
+  postId: PropTypes.number.isRequired,
 };
 
 export { Comments };

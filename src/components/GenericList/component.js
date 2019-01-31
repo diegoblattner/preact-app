@@ -28,7 +28,7 @@ class List extends Component {
       visibleItems: [],
       allItems: items,
       showLoadingPlaceholder: false,
-      currentPage: currentPage
+      currentPage,
     });
   }
 
@@ -56,7 +56,7 @@ class List extends Component {
     if (nextProps.items !== prevSate.allItems) {
       return List.getPageItems({
         ...prevSate,
-        allItems: nextProps.items
+        allItems: nextProps.items,
       });
     }
 
@@ -75,7 +75,7 @@ class List extends Component {
       visibleItems: newVisibleItems,
       allItems,
       showLoadingPlaceholder,
-      currentPage
+      currentPage,
     };
   }
 
@@ -85,7 +85,7 @@ class List extends Component {
     if (visibleItems.length < allItems.length) {
       return List.getPageItems({
         ...state,
-        currentPage: currentPage + 1
+        currentPage: currentPage + 1,
       });
     }
 
@@ -97,7 +97,7 @@ class List extends Component {
       renderItem,
       listClass = '',
       listItemClass = '',
-      loadingCard
+      loadingCard,
     } = this.props;
     const { visibleItems, showLoadingPlaceholder } = this.state;
 
@@ -120,7 +120,7 @@ List.propTypes = {
   currentPage: PropTypes.number,
   listClass: PropTypes.string,
   listItemClass: PropTypes.string,
-  loadingCard: PropTypes.element
+  loadingCard: PropTypes.element,
 };
 
 export { List };
