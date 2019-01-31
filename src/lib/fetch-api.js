@@ -9,11 +9,11 @@ const setCache = (key, data) => {
   };
 };
 
-const clearCache = (key) => {
+const clearCache = key => {
   delete simpleCache[key];
 };
 
-const getFromCache = (key) => {
+const getFromCache = key => {
   const cachedData = simpleCache[key];
   if (cachedData && new Date() - cachedData.time < cacheSpan) {
     return cachedData.data;
@@ -36,7 +36,7 @@ const fetchApi = async (url, returnOnError) => {
     return parsedResult;
   } catch (e) {
     // TODO: log api error
-    console.error(`api call ${url}`, e);
+    console.error(`api call ${url}`, e); // eslint-disable-line
     return returnOnError;
   }
 };

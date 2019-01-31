@@ -40,7 +40,7 @@ class ListBase extends Component {
   updateData() {
     const { promise } = this.props;
 
-    promise.then((resolvedData) => {
+    promise.then(resolvedData => {
       this.setState({
         listState: resolvedData.length > 0 ? states.loaded : states.empty,
         items: resolvedData,

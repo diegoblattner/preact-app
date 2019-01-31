@@ -2,8 +2,8 @@ import { h, Component } from 'preact';
 import PropTypes from 'prop-types';
 import { getUserById } from '../service';
 import { Placeholder } from '../../Placeholder/component';
-import appStyle from '../../style';
-import style from './style';
+import appStyle from '../../style.css';
+import style from './style.css';
 
 class Author extends Component {
   async componentDidMount() {
@@ -11,7 +11,7 @@ class Author extends Component {
     const result = await getUserById(userId);
 
     this.setState({
-      ...result
+      ...result,
     });
   }
 
@@ -46,7 +46,7 @@ class Author extends Component {
 }
 
 Author.propTypes = {
-  userId: PropTypes.number.isRequired
+  userId: PropTypes.number.isRequired,
 };
 
 export { Author };

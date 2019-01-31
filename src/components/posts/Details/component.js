@@ -4,8 +4,8 @@ import { getPostById } from '../service';
 import { Author } from '../../users/Author/component';
 import { Comments } from '../Comments/component';
 import { Placeholder } from '../../Placeholder/component';
-import appStyle from '../../style';
-import style from './style';
+import appStyle from '../../style.css';
+import style from './style.css';
 
 const LoadingPlaceholder = () => (
   <article>
@@ -29,7 +29,7 @@ class PostDetails extends Component {
     window.scroll(0, 0);
 
     this.state = {
-      loading: true
+      loading: true,
     };
   }
 
@@ -40,7 +40,7 @@ class PostDetails extends Component {
 
     this.setState({
       ...result,
-      loading: false
+      loading: false,
     });
   }
 
@@ -70,7 +70,7 @@ class PostDetails extends Component {
 }
 
 PostDetails.propTypes = {
-  postId: PropTypes.number.isRequired
+  postId: PropTypes.number.isRequired,
 };
 
 export { PostDetails };

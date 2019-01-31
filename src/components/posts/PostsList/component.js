@@ -2,8 +2,8 @@ import { h } from 'preact';
 import { ListBase, states } from '../../list/base';
 import { List } from '../../GenericList/component';
 import { PostCard } from '../PostCard/component';
-import appStyle from '../../style';
-import style from './style';
+import appStyle from '../../style.css';
+import style from './style.css';
 
 class PostsList extends ListBase {}
 
