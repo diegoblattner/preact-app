@@ -31,6 +31,7 @@
     "prettier": "^1.16.2"
   },
   "dependencies": {
+    "debounce": "github:diegoblattner/debounce#master",
     "express": "^4.16.4",
     "per-env": "^1.0.2",
     "preact": "^8.2.6",
