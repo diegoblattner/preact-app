@@ -1,22 +1,22 @@
 import { h, Component } from 'preact';
 import PropTypes from 'prop-types';
-import { debounce } from '../../lib/debounce';
+import debounce from 'debounce';
 
 const pageSize = 10;
-const offsetRatio = 1.75;
+const offsetRatio = 2;
 
 // document.body.offsetHeight === viewport height
 // document.body.scrollHeight === current total screen height (scroll height added)
 // window.scrollY === current scroll position. Max is document.body.scrollHeight - document.body.offsetHeight
 
-function onOffsetReached(fn) {
+const onOffsetReached = fn => () => {
   if (
     document.body.scrollHeight - window.scrollY <
     document.body.offsetHeight * offsetRatio
   ) {
     window.requestAnimationFrame(fn);
   }
-}
+};
 
 class List extends Component {
   constructor(props) {
@@ -33,11 +33,15 @@ class List extends Component {
   }
 
   componentDidMount() {
-    this.onScroll = debounce(() => {
-      onOffsetReached(() => {
-        this.setState(List.getNextPage(this.state));
-      });
-    });
+    this.onScroll = debounce(
+      onOffsetReached(
+        () => {
+          this.setState(List.getNextPage(this.state));
+        },
+        200,
+        600,
+      ),
+    );
     document.addEventListener('scroll', this.onScroll);
   }
 
@@ -66,7 +70,6 @@ class List extends Component {
   static getPageItems(state) {
     const { allItems = [], currentPage = 1 } = state;
 
-    // if there are still items to be shown
     const newVisibleItems = allItems.slice(0, currentPage * pageSize);
     const showLoadingPlaceholder =
       newVisibleItems.length + pageSize <= allItems.length;
