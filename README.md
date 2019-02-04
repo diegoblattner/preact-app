@@ -1,5 +1,6 @@
 # preact-app
 
+Live on https://preact-app-preact-app.7e14.starter-us-west-2.openshiftapps.com/
 Playing around with preact.
 This project uses
 
